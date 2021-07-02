@@ -1,19 +1,10 @@
 import "./App.css";
-import { moviesRequest } from "./api/moviesRequest";
-import { useState, useEffect } from "react";
+import { connect } from "react-redux";
 import { Header } from "./components/Header";
+import { moviesRequest } from "./redux/action";
 
-export const App = () => {
-  const [movies, setMovies] = useState([]);
-
-  const getMovies = async () => {
-    const films = await moviesRequest();
-    setMovies(films);
-  };
-
-  useEffect(() => {
-    getMovies();
-  }, []);
-
+const App = () => {
   return <Header />;
 };
+
+export default connect(null, moviesRequest())(App);
