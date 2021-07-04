@@ -1,9 +1,11 @@
-import { HeaderContainer, Title, Separator } from "./Header.style";
+import { HeaderContainer, Title, Separator, StyledLink } from "./Header.style";
 
 export const Header = () => {
   return (
     <HeaderContainer>
-      <Title>ZELTY MOVIES</Title>
+      <StyledLink to="/">
+        <Title>ZELTY MOVIES</Title>
+      </StyledLink>
       <Separator />
     </HeaderContainer>
   );
