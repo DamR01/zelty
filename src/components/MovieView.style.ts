@@ -9,6 +9,7 @@ export const MovieTitle = styled.h1`
 
 export const Image = styled.img`
   padding: 20px;
+  position: relative;
 `;
 
 export const MovieDescription = styled.p`
