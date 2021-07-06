@@ -1,4 +1,5 @@
 import { DateTime } from "luxon";
+import { getDate } from "../utils/date";
 import { MovieProps } from "../utils/types";
 
 import {
@@ -14,8 +15,6 @@ interface MovieListItemProps {
 }
 
 export const MovieListItem = ({ movie }: MovieListItemProps) => {
-  const getDate = DateTime.local().toISODate();
-
   const moviedate = DateTime.fromISO(movie.release_date);
   const dateToday = DateTime.fromISO(getDate);
   const diffDate = dateToday.diff(moviedate, ["months", "days"]).toObject();

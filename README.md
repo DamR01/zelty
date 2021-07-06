@@ -15,3 +15,9 @@ You will also see any lint errors in the console.
 ### `yarn lint`
 
 Analyze your code to find problems
+
+### Project Structure
+
+- file with only components that we can reused anywhere in the app
+- file with all components for redux
+- file utils where we can find all constants, type that we used in the app
