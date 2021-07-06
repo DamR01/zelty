@@ -3,7 +3,8 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./App.css";
 
 import { Header, MoviesList, MovieView } from "./components";
-import { moviesRequest } from "./redux/action";
+import MoviesFavorites from "./components/MoviesFavorites";
+import { moviesRequest } from "./redux/actions";
 
 const App = () => {
   return (
@@ -12,6 +13,7 @@ const App = () => {
       <Switch>
         <Route path="/" exact component={MoviesList} />
         <Route path="/movie/:slug" component={MovieView} />
+        <Route path="/favorites" component={MoviesFavorites} />
       </Switch>
     </Router>
   );

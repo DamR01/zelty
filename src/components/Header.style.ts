@@ -24,3 +24,9 @@ export const StyledLink = styled(Link)`
     color: black;
   }
 `;
+
+export const Head = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+`;

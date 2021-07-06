@@ -1,4 +1,5 @@
 import { DateTime } from "luxon";
+import { MovieProps } from "../utils/types";
 
 import {
   MovieCard,
@@ -8,7 +9,11 @@ import {
   MovieRelease,
 } from "./MovieListItem.style";
 
-export const MovieListItem = ({ movie }: any) => {
+interface MovieListItemProps {
+  movie: MovieProps;
+}
+
+export const MovieListItem = ({ movie }: MovieListItemProps) => {
   const getDate = DateTime.local().toISODate();
 
   const moviedate = DateTime.fromISO(movie.release_date);
