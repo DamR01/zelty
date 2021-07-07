@@ -1,11 +1,10 @@
-import { connect, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 
 import { MovieContainer } from "./MoviesList.style";
 import { MovieListItem } from "./MovieListItem";
-import { favorisReducer } from "../redux/reducers/favorisReducer";
 import { MovieProps } from "../utils/types";
 
-const MoviesFavorites = () => {
+export const MoviesFavorites = () => {
   const favorites = useSelector((state: any) => state.favorisReducer);
 
   return (
@@ -16,5 +15,3 @@ const MoviesFavorites = () => {
     </MovieContainer>
   );
 };
-
-export default connect(favorisReducer, null)(MoviesFavorites);

@@ -2,8 +2,7 @@ import { connect } from "react-redux";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./App.css";
 
-import { Header, MoviesList, MovieView } from "./components";
-import MoviesFavorites from "./components/MoviesFavorites";
+import { Header, MoviesList, MovieView, MoviesFavorites } from "./components";
 import { moviesRequest } from "./redux/actions";
 
 const App = () => {
